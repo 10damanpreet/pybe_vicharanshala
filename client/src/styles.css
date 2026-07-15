@@ -1,3 +1,8 @@
+/* ═══════════════════════════════════════════════════════════════════════
+   PyBe — Premium UI Stylesheet v2.0
+   Design tokens: dark-green (#16231f), cream (#f4f1ea), lime (#d8f07c)
+   ═══════════════════════════════════════════════════════════════════════ */
+
 :root {
   font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   color: #17201d;
@@ -19,11 +24,15 @@ select {
   font: inherit;
 }
 
+/* ── App Shell ─────────────────────────────────────────────────────── */
+
 .app-shell {
   min-height: 100vh;
   display: grid;
   grid-template-columns: 320px 1fr;
 }
+
+/* ── Sidebar ───────────────────────────────────────────────────────── */
 
 .sidebar {
   background: #16231f;
@@ -87,6 +96,8 @@ select {
   color: #f8f4ec;
 }
 
+/* ── Scenario List ─────────────────────────────────────────────────── */
+
 .scenario-list {
   overflow: auto;
   display: grid;
@@ -104,6 +115,12 @@ select {
   display: grid;
   gap: 7px;
   cursor: pointer;
+  transition: all 0.18s ease;
+}
+
+.scenario:hover {
+  background: #2a4039;
+  border-color: #4a6a5f;
 }
 
 .scenario.active {
@@ -123,11 +140,15 @@ select {
   opacity: .75;
 }
 
+/* ── Workspace ─────────────────────────────────────────────────────── */
+
 .workspace {
   padding: 28px;
   display: grid;
   gap: 24px;
 }
+
+/* ── Hero ──────────────────────────────────────────────────────────── */
 
 .hero {
   min-height: 230px;
@@ -181,12 +202,16 @@ select {
   color: #d9e2dc;
 }
 
+/* ── Main Grid ─────────────────────────────────────────────────────── */
+
 .main-grid {
   display: grid;
   grid-template-columns: minmax(0, 1.1fr) minmax(360px, .9fr);
   gap: 20px;
   align-items: start;
 }
+
+/* ── Panel ─────────────────────────────────────────────────────────── */
 
 .panel {
   background: #fffdf7;
@@ -219,6 +244,8 @@ h2 {
   line-height: 1.6;
 }
 
+/* ── Objectives ────────────────────────────────────────────────────── */
+
 .objective-row {
   display: flex;
   gap: 8px;
@@ -233,6 +260,8 @@ h2 {
   padding: 7px 10px;
   font-size: .86rem;
 }
+
+/* ── Learning Form ─────────────────────────────────────────────────── */
 
 .learning-form {
   display: grid;
@@ -268,12 +297,23 @@ textarea {
   gap: 8px;
   cursor: pointer;
   font-weight: 800;
+  transition: background 0.15s ease, transform 0.1s ease;
+}
+
+.primary:hover {
+  background: #1f3029;
+}
+
+.primary:active {
+  transform: scale(0.98);
 }
 
 .primary:disabled {
   opacity: .65;
   cursor: wait;
 }
+
+/* ── Empty State ───────────────────────────────────────────────────── */
 
 .empty {
   min-height: 360px;
@@ -283,6 +323,8 @@ textarea {
   color: #68736f;
   padding: 30px;
 }
+
+/* ── Result Stack ──────────────────────────────────────────────────── */
 
 .result-stack {
   display: grid;
@@ -320,6 +362,8 @@ textarea {
   margin: 4px 0;
 }
 
+/* ── Code Block (base) ─────────────────────────────────────────────── */
+
 .code-block {
   background: #111916;
   color: #e6f2eb;
@@ -327,12 +371,14 @@ textarea {
   overflow: hidden;
 }
 
-.code-block div {
+.code-block > div:first-child {
   padding: 12px 14px;
   display: flex;
   gap: 8px;
   align-items: center;
   background: #1f2d28;
+  font-weight: 600;
+  font-size: 0.88rem;
 }
 
 pre {
@@ -347,6 +393,45 @@ pre {
   color: #cddbd5;
 }
 
+/* ── Code Viewer Wrapper ───────────────────────────────────────────── */
+
+.code-viewer-wrapper {
+  position: relative;
+}
+
+.code-viewer-wrapper .code-block {
+  border-radius: 8px 8px 0 0;
+}
+
+.run-sandbox-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  width: 100%;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 0 0 8px 8px;
+  background: linear-gradient(135deg, #7b9f27, #5a7a12);
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  letter-spacing: 0.02em;
+}
+
+.run-sandbox-btn:hover {
+  background: linear-gradient(135deg, #8db52e, #6b8f1a);
+  box-shadow: 0 4px 16px rgba(123, 159, 39, 0.35);
+}
+
+.run-sandbox-btn:active {
+  transform: scale(0.98);
+}
+
+/* ── Feedback & Notes ──────────────────────────────────────────────── */
+
 .feedback {
   padding-left: 20px;
   color: #43504b;
@@ -359,12 +444,16 @@ pre {
   padding: 14px;
 }
 
+/* ── Dashboard ─────────────────────────────────────────────────────── */
+
 .dashboard {
   display: grid;
   grid-template-columns: 1fr 1.2fr 1fr;
   gap: 20px;
   align-items: start;
 }
+
+/* ── Analytics List ────────────────────────────────────────────────── */
 
 .analytics-list {
   display: grid;
@@ -381,6 +470,18 @@ pre {
 meter {
   width: 100%;
 }
+
+/* ── Recharts Wrapper ──────────────────────────────────────────────── */
+
+.recharts-wrapper-container {
+  margin-bottom: 8px;
+}
+
+.recharts-wrapper {
+  width: 100%;
+}
+
+/* ── Roadmap ───────────────────────────────────────────────────────── */
 
 .roadmap {
   display: grid;
@@ -401,6 +502,7 @@ meter {
   color: #d8f07c;
   display: grid;
   place-items: center;
+  font-size: 0.82rem;
 }
 
 .roadmap h3 {
@@ -416,6 +518,8 @@ meter {
 .roadmap small {
   color: #7b867f;
 }
+
+/* ── Sessions ──────────────────────────────────────────────────────── */
 
 .sessions {
   display: grid;
@@ -437,6 +541,8 @@ meter {
   margin-top: 4px;
 }
 
+/* ── Loading Screen ────────────────────────────────────────────────── */
+
 .loading {
   min-height: 100vh;
   display: grid;
@@ -445,6 +551,245 @@ meter {
   color: #d8f07c;
   font-size: 1.5rem;
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Python Sandbox — Modal Overlay
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.python-sandbox-overlay {
+  position: fixed;
+  inset: 0;
+  z-index: 9999;
+  background: rgba(10, 16, 14, 0.75);
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  animation: sandbox-fadein 0.2s ease;
+}
+
+@keyframes sandbox-fadein {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+
+.python-sandbox {
+  width: 100%;
+  max-width: 760px;
+  max-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background: #111916;
+  border: 1px solid #2a3d36;
+  border-radius: 12px;
+  box-shadow:
+    0 0 0 1px rgba(216, 240, 124, 0.06),
+    0 24px 80px rgba(0, 0, 0, 0.55),
+    0 0 120px rgba(123, 159, 39, 0.08);
+  overflow: hidden;
+  animation: sandbox-slidein 0.25s ease;
+}
+
+@keyframes sandbox-slidein {
+  from { transform: translateY(16px) scale(0.97); opacity: 0; }
+  to   { transform: translateY(0) scale(1); opacity: 1; }
+}
+
+.sandbox-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 14px 18px;
+  background: #1a2a24;
+  border-bottom: 1px solid #2a3d36;
+}
+
+.sandbox-header-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d8f07c;
+}
+
+.sandbox-header-left strong {
+  color: #f8f4ec;
+  font-size: 0.95rem;
+}
+
+.sandbox-badge {
+  background: #24342f;
+  border: 1px solid #385149;
+  border-radius: 999px;
+  padding: 2px 10px;
+  font-size: 0.72rem;
+  color: #8a9e95;
+  letter-spacing: 0.03em;
+}
+
+.sandbox-close {
+  background: transparent;
+  border: none;
+  color: #8a9e95;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 6px;
+  display: grid;
+  place-items: center;
+  transition: all 0.15s ease;
+}
+
+.sandbox-close:hover {
+  background: #2a3d36;
+  color: #f8f4ec;
+}
+
+.sandbox-body {
+  flex: 1;
+  overflow: auto;
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  min-height: 0;
+}
+
+.sandbox-editor-section,
+.sandbox-output-section {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+}
+
+.sandbox-editor-section {
+  border-bottom: 1px solid #2a3d36;
+}
+
+.sandbox-label {
+  padding: 10px 18px 6px;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6a7d75;
+  font-weight: 700;
+}
+
+.sandbox-editor {
+  flex: 1;
+  min-height: 160px;
+  margin: 0 14px 14px;
+  padding: 14px;
+  background: #0d1411;
+  border: 1px solid #243630;
+  border-radius: 8px;
+  color: #d8f07c;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', 'Consolas', monospace;
+  font-size: 0.88rem;
+  line-height: 1.6;
+  resize: none;
+  outline: none;
+  tab-size: 4;
+  white-space: pre;
+  overflow: auto;
+  transition: border-color 0.15s ease;
+}
+
+.sandbox-editor:focus {
+  border-color: #7b9f27;
+  box-shadow: 0 0 0 2px rgba(123, 159, 39, 0.15);
+}
+
+.sandbox-output {
+  flex: 1;
+  min-height: 120px;
+  margin: 0 14px 14px;
+  padding: 14px;
+  background: #0a0f0d;
+  border: 1px solid #1e2e28;
+  border-radius: 8px;
+  overflow: auto;
+  font-family: 'JetBrains Mono', 'Fira Code', 'Cascadia Code', 'SF Mono', 'Consolas', monospace;
+  font-size: 0.85rem;
+  line-height: 1.5;
+}
+
+.sandbox-stdout {
+  color: #c4e6d4;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.sandbox-error {
+  color: #ff6b6b;
+  margin: 0;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.sandbox-placeholder {
+  color: #4a5e55;
+  font-style: italic;
+}
+
+.sandbox-loading {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #d8f07c;
+  font-size: 0.88rem;
+}
+
+.sandbox-controls {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 18px;
+  background: #1a2a24;
+  border-top: 1px solid #2a3d36;
+}
+
+.sandbox-run-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 22px;
+  border: none;
+  border-radius: 8px;
+  background: linear-gradient(135deg, #7b9f27, #5a7a12);
+  color: #fff;
+  font-weight: 800;
+  font-size: 0.88rem;
+  cursor: pointer;
+  transition: all 0.18s ease;
+  letter-spacing: 0.02em;
+}
+
+.sandbox-run-btn:hover {
+  background: linear-gradient(135deg, #8db52e, #6b8f1a);
+  box-shadow: 0 4px 20px rgba(123, 159, 39, 0.4);
+}
+
+.sandbox-run-btn:active {
+  transform: scale(0.97);
+}
+
+.sandbox-run-btn:disabled {
+  opacity: 0.6;
+  cursor: wait;
+}
+
+/* Spinner animation for Loader icon */
+@keyframes spin {
+  from { transform: rotate(0deg); }
+  to   { transform: rotate(360deg); }
+}
+
+.spin {
+  animation: spin 1s linear infinite;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Responsive
+   ═══════════════════════════════════════════════════════════════════════ */
 
 @media (max-width: 1050px) {
   .app-shell {
@@ -490,4 +835,110 @@ meter {
   .analytics-list div {
     grid-template-columns: 1fr;
   }
+
+  .python-sandbox {
+    max-width: 100%;
+    max-height: 100vh;
+    border-radius: 0;
+  }
+
+  .python-sandbox-overlay {
+    padding: 0;
+  }
 }
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Error Banner (mutation / API error display)
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.error-banner {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 16px;
+  margin-bottom: 16px;
+  background: #fef2f2;
+  border: 1px solid #fecaca;
+  border-radius: 8px;
+  color: #991b1b;
+  font-size: 0.9rem;
+  animation: shake 0.3s ease-in-out;
+}
+
+@keyframes shake {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-4px); }
+  75% { transform: translateX(4px); }
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Error Boundary fallback
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.error-boundary {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 60vh;
+  gap: 16px;
+  padding: 40px;
+  text-align: center;
+  color: #991b1b;
+}
+
+.error-boundary h2 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.error-boundary p {
+  max-width: 480px;
+  color: #53615c;
+  line-height: 1.6;
+}
+
+.error-boundary-details {
+  background: #1a1a2e;
+  color: #ff6b6b;
+  padding: 16px;
+  border-radius: 8px;
+  font-size: 0.8rem;
+  max-width: 600px;
+  overflow-x: auto;
+  text-align: left;
+}
+
+.error-boundary button {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+/* ═══════════════════════════════════════════════════════════════════════
+   Sandbox reset button
+   ═══════════════════════════════════════════════════════════════════════ */
+
+.sandbox-reset-btn {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 18px;
+  background: #374151;
+  color: #f9fafb;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.sandbox-reset-btn:hover {
+  background: #4b5563;
+}
+
+.sandbox-controls {
+  display: flex;
+  gap: 10px;
+}
+

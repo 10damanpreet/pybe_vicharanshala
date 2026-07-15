@@ -1,15 +1,30 @@
 {
   "name": "pybe-mern-app",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "private": true,
   "scripts": {
     "installAll": "npm install --prefix server && npm install --prefix client",
     "dev": "concurrently \"npm run dev --prefix server\" \"npm run dev --prefix client\"",
     "seed": "npm run seed --prefix server",
-    "start": "npm run start --prefix server"
+    "start": "npm run start --prefix server",
+    "prisma:setup": "npm run prisma:setup --prefix server",
+    "lint": "npm run lint --prefix client",
+    "prepare": "husky"
   },
   "dependencies": {
     "concurrently": "^9.1.2"
   },
-  "devDependencies": {}
+  "devDependencies": {
+    "husky": "^9.1.7",
+    "lint-staged": "^15.4.0"
+  },
+  "lint-staged": {
+    "client/src/**/*.{js,jsx}": [
+      "prettier --write",
+      "eslint --fix"
+    ],
+    "server/src/**/*.js": [
+      "prettier --write"
+    ]
+  }
 }

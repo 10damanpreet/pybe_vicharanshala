@@ -1,0 +1,11 @@
+{"level":"info","message":"Server running on http://localhost:5000","service":"pybe-server","timestamp":"2026-07-05T20:43:02.518Z"}
+{"level":"info","message":"MEMENTO_MODE = LOCAL_HEURISTIC","service":"pybe-server","timestamp":"2026-07-05T20:43:02.519Z"}
+{"level":"info","message":"CORS origin = http://localhost:5173","service":"pybe-server","timestamp":"2026-07-05T20:43:02.519Z"}
+{"level":"info","message":"New user registered: test@example.com","service":"pybe-server","timestamp":"2026-07-05T20:58:57.844Z"}
+{"level":"info","message":"Server running on http://localhost:5000","service":"pybe-server","timestamp":"2026-07-05T21:31:43.254Z"}
+{"level":"info","message":"MEMENTO_MODE = LOCAL_HEURISTIC","service":"pybe-server","timestamp":"2026-07-05T21:31:43.256Z"}
+{"level":"info","message":"CORS origin = http://localhost:5173","service":"pybe-server","timestamp":"2026-07-05T21:31:43.256Z"}
+{"level":"info","message":"Server running on http://localhost:5000","service":"pybe-server","timestamp":"2026-07-15T08:27:21.917Z"}
+{"level":"info","message":"MEMENTO_MODE = LOCAL_HEURISTIC","service":"pybe-server","timestamp":"2026-07-15T08:27:21.919Z"}
+{"level":"info","message":"CORS origin = http://localhost:5173","service":"pybe-server","timestamp":"2026-07-15T08:27:21.919Z"}
+{"level":"info","message":"\nSIGINT received. Shutting down gracefully...","service":"pybe-server","timestamp":"2026-07-15T08:30:09.368Z"}
