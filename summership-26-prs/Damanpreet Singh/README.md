@@ -38,14 +38,17 @@ PyBe goes beyond traditional syntax-focused coding platforms. It focuses on:
 
 ## ✨ Core Features
 
+*   **🦴 Interactive Skeleton Code Scanner:** A 3-column pedagogical story scanner mapping real-world case studies (The Royal Bakery, Thirsty Crow, Data L7 Teach-Back) to Python code logic for Class 9/10 students.
+*   **🤖 Dual-Engine AI System (Gemini & MiniMax):** Integrated Google Gemini 3.6 Flash & MiniMax APIs with automatic fallbacks for non-stop learning availability.
+*   **🎓 Saksham Interactive Case Study Player:** Guided 3-stage interactive learning engine featuring logic tests, concept reveals, and Pyodide WebAssembly Python execution.
+*   **🌳 Concept Graph & Tree Visualizers:** Interactive modals visualizing multi-page learning structures and concept hierarchies.
 *   **Scenario Browser:** Filter and search through scenarios by difficulty and core programming concepts.
 *   **Interactive Learning Session:** A multi-step wizard guiding the user through reasoning, code generation, execution, and reflection.
 *   **In-Browser Sandbox:** Write and execute Python code safely and instantly using WebAssembly.
 *   **Dynamic Analytics Dashboard:** Visual charts tracking problem-solving speed, abstraction accuracy, and prompt scoring over time.
-*   **Roadmap View:** A visual timeline (V0 → V3) showing the planned evolution of the platform.
-*   **Misconception Detection:** The heuristic engine detects common beginner mistakes (like using Javascript syntax in Python) and offers immediate corrections.
+*   **Roadmap View:** A visual timeline showing the planned evolution of the platform.
+*   **Misconception Detection:** The heuristic engine detects common beginner mistakes and offers immediate corrections.
 *   **Mastery Tracking:** Derives "mastery signals" based on the depth of the user's reasoning and reflection.
-*   **Full CRUD:** Complete Create, Read, Update, Delete capabilities for Scenarios and Sessions via the API.
 
 ---
 
